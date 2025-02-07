@@ -1,0 +1,85 @@
+Testing Strategy and Test Cases Documentation
+
+Overall Testing Strategy
+My testing approach focuses on evaluating both Distance Vector (DV) and Link State (LS) routing protocols under various network conditions. The test cases are designed to verify:
+1. Protocol convergence and stability
+2. Route calculation accuracy
+3. Response to topology changes
+4. Performance under high-delay and packet loss conditions
+5. Path selection optimization
+
+
+Test1
+
+Purpose:
+- Tests protocol behavior in a large network (13 nodes) with frequent topology changes
+- Evaluates route convergence after multiple simultaneous link failures
+
+Key Test Scenarios:
+- Multiple alternative paths between source and destination
+- Sequential link failures and recoveries
+- Dynamic delay changes during transmission
+- Long-distance route calculations (1 to 15)
+
+Expected Behavior:
+- Protocols should quickly adapt to topology changes
+- Alternative paths should be found when primary paths fail
+- Route convergence should occur within acceptable timeframes
+
+
+Test2
+
+Purpose:
+- Evaluates protocol performance under challenging network conditions
+- Tests reliability with varied packet loss probabilities
+- Assesses behavior with high-latency links
+
+Key Test Scenarios:
+- Links with high delay (up to 120ms)
+- Variable packet loss probabilities (10-30%)
+- Combination of link failures and delay changes
+- Multiple possible paths with different reliability characteristics
+
+Expected Behavior:
+- Protocols should maintain connectivity despite packet loss
+- Route selection should consider both delay and reliability
+- Stable operation under high-latency conditions
+
+
+Test3
+
+Purpose:
+- Tests rapid adaptation to changing network conditions
+- Evaluates path selection when multiple alternatives exist
+- Assesses protocol stability during frequent route changes
+
+Key Test Scenarios:
+- Multiple equal-cost paths between nodes
+- Rapid sequence of link failures and recoveries
+- Dynamic delay adjustments forcing path recalculation
+- Direct vs. indirect path competition
+
+Expected Behavior:
+- Quick convergence after topology changes
+- Optimal path selection based on current conditions
+- Stable routing despite frequent changes
+
+
+Test4
+
+Purpose:
+- Tests protocol resilience to continuous network changes
+- Evaluates behavior under cascading topology updates
+- Assesses routing stability with frequent state changes
+
+Key Test Scenarios:
+- Overlapping link state changes
+- Combination of delay changes and link failures
+- Regular transmission tests during topology changes
+- Mixed delay and reliability conditions
+
+Expected Behavior:
+- Maintain consistent routing despite frequent changes
+- Proper handling of simultaneous topology updates
+- Efficient route recalculation during state changes
+

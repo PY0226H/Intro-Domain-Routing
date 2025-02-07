@@ -1,0 +1,45 @@
+[nodes]
+
+1 2 3 4 5 6 7 8 9 10 11 12 15
+
+[links]
+
+(1,2) delay 0.020 prob 0.0
+(2,3) delay 0.030 prob 0.0
+(3,4) delay 0.040 prob 0.0
+(4,5) delay 0.025 prob 0.0
+(5,6) delay 0.015 prob 0.0
+(6,7) delay 0.035 prob 0.0
+(7,8) delay 0.045 prob 0.0
+(8,9) delay 0.020 prob 0.0
+(9,10) delay 0.030 prob 0.0
+(10,11) delay 0.025 prob 0.0
+(11,12) delay 0.040 prob 0.0
+(12,15) delay 0.035 prob 0.0
+(1,4) delay 0.050 prob 0.0
+(1,7) delay 0.060 prob 0.0
+(2,6) delay 0.045 prob 0.0
+(3,8) delay 0.030 prob 0.0
+(5,9) delay 0.040 prob 0.0
+(6,11) delay 0.055 prob 0.0
+(7,12) delay 0.025 prob 0.0
+(8,15) delay 0.035 prob 0.0
+
+[events]
+
+100.00 xmit (1,15)
+200.00 linkdying (1,2)
+250.00 linkdying (3,4)
+300.00 xmit (1,12)
+350.00 linkcomingup (1,2)
+400.00 changedelay (7,8) 0.090
+450.00 xmit (15,1)
+500.00 linkdying (6,7)
+550.00 linkdying (8,9)
+600.00 xmit (1,10)
+650.00 linkcomingup (6,7)
+700.00 changedelay (1,7) 0.030
+750.00 linkcomingup (8,9)
+800.00 linkdying (11,12)
+850.00 xmit (12,1)
+900.00 end
